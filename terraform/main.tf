@@ -9,7 +9,7 @@ terraform {
 
 provider "google" {
   credentials = file("../keys/terraform-key.json")
-  project     = "medicare-analysis-45210" 
+  project     = "medicare" 
   region      = "us-central1"
 }
 
@@ -42,5 +42,5 @@ resource "google_bigquery_dataset" "medicare_dataset" {
 
 variable "project_id" {
   description = "The GCP Project ID"
-  default     = "medicare-analysis-45210" 
+  default     = "medicare" 
 }
